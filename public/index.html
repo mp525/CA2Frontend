@@ -16,23 +16,19 @@
     <div align="center" class="shadow p-3 mb-5 bg-white rounded">
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Get Person By Phone</button>
     <button class="btn btn-secondary"  data-toggle="modal" data-target="#exampleModal2">Get People by Hobby</button>
-    <button class="btn btn-secondary" data-toggle="modal3" data-target="#exampleModal3">3</button>
-    <button class="btn btn-secondary" data-toggle="modal4" data-target="#exampleModal4">4</button>
-    <button class="btn btn-secondary" data-toggle="modal5" data-target="#exampleModal5">5</button>
-    <button class="btn btn-secondary" data-toggle="modal6" data-target="#exampleModal6">6</button>
-    <button class="btn btn-secondary" data-toggle="modal7" data-target="#exampleModal7">7</button>
-    <button class="btn btn-secondary" data-toggle="modal8" data-target="#exampleModal8">8</button>
-    </div>
-
-
+    <button class="btn btn-secondary" data-toggle="modal3" data-target="#exampleModal3">Get People by Zip</button>
+    <button class="btn btn-secondary" data-toggle="modal4" data-target="#exampleModal4">Get all zips</button>
+    <button class="btn btn-secondary" data-toggle="modal5" data-target="#exampleModal5">Get Number of people by Hobby</button>
+    <button class="btn btn-secondary" data-toggle="modal6" data-target="#exampleModal6">Add Person</button>
+    <button class="btn btn-secondary" data-toggle="modal7" data-target="#exampleModal7">Edit Person</button>
     
-  
-
+    </div>
 
 
     <div align="center">
     <div id="display" class="shadow-sm p-3 mb-5 bg-white rounded col-6">
         <h3 align="center">Information will be shown here</h3>
+        <table id="table"></table>
         <br><br><br><br>
 
     </div>
@@ -50,11 +46,11 @@
           </button>
         </div>
         <div class="modal-body">
-          ...1
+            <p>Type Phone Number</p><input type="number">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          
+          <button id="getByPhone" type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
@@ -80,6 +76,7 @@
       </div>
     </div>
   </div>
+  <script src="../src/index.js"></script>
 </body>
     
   
