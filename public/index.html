@@ -15,9 +15,9 @@
     <h3 align="center">All functions of the website below on this Single Page Application</h3>
     <div align="center" class="shadow p-3 mb-5 bg-white rounded">
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Get Person By Phone</button>
-    <button class="btn btn-secondary"  data-toggle="modal" data-target="#exampleModal2">Get People by Hobby</button>
+    <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal2">Get People by Hobby</button>
     <button class="btn btn-secondary" data-toggle="modal3" data-target="#exampleModal3">Get People by Zip</button>
-    <button class="btn btn-secondary" data-toggle="modal4" data-target="#exampleModal4">Get all zips</button>
+    <button class="btn btn-secondary">Get all zips</button>
     <button class="btn btn-secondary" data-toggle="modal5" data-target="#exampleModal5">Get Number of people by Hobby</button>
     <button class="btn btn-secondary" data-toggle="modal6" data-target="#exampleModal6">Add Person</button>
     <button class="btn btn-secondary" data-toggle="modal7" data-target="#exampleModal7">Edit Person</button>
@@ -28,7 +28,8 @@
     <div align="center">
     <div id="display" class="shadow-sm p-3 mb-5 bg-white rounded col-6">
         <h3 align="center">Information will be shown here</h3>
-        <table id="table"></table>
+        <table id="table" class="table"></table>
+        <table id="table2" class="table"></table>
         <br><br><br><br>
 
     </div>
@@ -46,11 +47,11 @@
           </button>
         </div>
         <div class="modal-body">
-            <p>Type Phone Number</p><input type="number">
+            <p>Type Phone Number</p><input type="number" id="phone">
         </div>
         <div class="modal-footer">
           
-          <button id="getByPhone" type="button" class="btn btn-primary">Save changes</button>
+          <button id="getByPhone" type="button" class="btn btn-primary">Get By Phone</button>
         </div>
       </div>
     </div>
