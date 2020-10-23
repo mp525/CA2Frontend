@@ -35,3 +35,26 @@ function getAllByHobby() {
             console.log(data.name);
         });
 }
+document.getElementById("getAllZips").onclick = getAllZips;
+function getAllZips() {
+
+    
+    console.log("We have connection");
+
+
+    let url = "https://mparking.dk/CA2Backend/api/person/allZips";
+    
+    fetch(url)
+    
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            let mapped = data.map(x => {
+                return ("" + x + "<br>")
+            })
+           document.getElementById("table").innerHTML = mapped.join("");
+        });
+    
+    
+}
