@@ -1,4 +1,5 @@
 document.getElementById("getByPhone").onclick=getByPhone;
+document.getElementById("submitCount").onclick=getCountHobby;
 
 //Get a Person using a phone number
 function getByPhone() {
@@ -34,4 +35,18 @@ function getAllByHobby() {
         .then(function (data) {
             console.log(data.name);
         });
+}
+
+//Get number of people by hobby
+function getCountHobby() {
+    const hobbyName = document.getElementById("count").value;
+    const url = "https://mparking.dk/CA2Backend/api/person/countByHobby/"+hobbyName;
+    fetch(url)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        document.getElementById("getCount").innerText="Number of people with the hobby "+hobbyName+": "+data.count;
+        console.log(data.count);
+    });
 }

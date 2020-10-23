@@ -18,7 +18,7 @@
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal2">Get People by Hobby</button>
     <button class="btn btn-secondary" data-toggle="modal3" data-target="#exampleModal3">Get People by Zip</button>
     <button class="btn btn-secondary">Get all zips</button>
-    <button class="btn btn-secondary" data-toggle="modal5" data-target="#exampleModal5">Get Number of people by Hobby</button>
+    <button class="btn btn-secondary" data-toggle="modal" data-target="#countHobby">Get Number of people by Hobby</button>
     <button class="btn btn-secondary" data-toggle="modal6" data-target="#exampleModal6">Add Person</button>
     <button class="btn btn-secondary" data-toggle="modal7" data-target="#exampleModal7">Edit Person</button>
     
@@ -30,6 +30,7 @@
         <h3 align="center">Information will be shown here</h3>
         <table id="table" class="table"></table>
         <table id="table2" class="table"></table>
+        <p id="getCount"></p>
         <br><br><br><br>
 
     </div>
@@ -77,6 +78,29 @@
       </div>
     </div>
   </div>
+
+  <!-- Get Number of People by Hobby -->
+  <div class="modal fade" id="countHobby" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="GetCountLabel">Get People by hobby</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Get number of people by given hobby</p>
+          <input type="text" id="count">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="submitCount" type="button" class="btn btn-primary">Get number</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="../src/index.js"></script>
 </body>
     
