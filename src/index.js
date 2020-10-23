@@ -2,6 +2,10 @@ document.getElementById("getByPhone").onclick=getByPhone;
 
 //Get a Person using a phone number
 function getByPhone() {
+    document.getElementById("table").innerHTML="";
+    document.getElementById("table2").innerHTML="";
+    document.getElementById("hobby2").innerText="";
+
     let phone = document.getElementById("phone").value;
     let url="https://mparking.dk/CA2Backend/api/person/phone/"+phone;
     const str="";
@@ -17,7 +21,8 @@ function getByPhone() {
             var mapHobbies=data.hobbies.map(x=>{
                 return "<tr><th>"+x.name+"</th><th>"+x.wikiLink+"</th><th>"+x.type+"</th></tr>"
             });
-            document.getElementById("table2").innerHTML="<h2>Hobbies</h2>"+mapHobbies;
+            document.getElementById("hobby2").innerText="Hobby";
+            document.getElementById("table2").innerHTML=mapHobbies;
             console.log(data);
         });
         
@@ -25,6 +30,9 @@ function getByPhone() {
 //Method to use endpoint to retrieve all people who participate in a given hobby
 document.getElementById("allByHobby").onclick=getAllByHobby;
 function getAllByHobby() {
+    document.getElementById("table").innerHTML="";
+    document.getElementById("table2").innerHTML="";
+    document.getElementById("hobby2").innerText="";
     let Hobby = document.getElementById("hobby").value;
     let url="https://mparking.dk/CA2Backend/api/person/byhobby/"+Hobby;
     let strhelp="<tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Street</th><th>Zip</th><th>HouseNr</th></tr>"
@@ -48,6 +56,9 @@ function getAllByHobby() {
 document.getElementById("submitCount").onclick=getCountHobby;
 //Get number of people by hobby
 function getCountHobby() {
+    document.getElementById("table").innerHTML="";
+    document.getElementById("table2").innerHTML="";
+    document.getElementById("hobby2").innerText="";
     const hobbyName = document.getElementById("count").value;
     const url = "https://mparking.dk/CA2Backend/api/person/countByHobby/"+hobbyName;
 
@@ -63,7 +74,9 @@ function getCountHobby() {
 
 document.getElementById("getAllZips").onclick = getAllZips;
 function getAllZips() {
-
+    document.getElementById("table").innerHTML="";
+    document.getElementById("table2").innerHTML="";
+    document.getElementById("hobby2").innerText="";
     
     console.log("We have connection");
 
@@ -87,6 +100,9 @@ function getAllZips() {
     const btnZip = document.getElementById("getByZip").addEventListener("click", getByZip);
 
     function getByZip(e) {
+        document.getElementById("table").innerHTML="";
+    document.getElementById("table2").innerHTML="";
+    document.getElementById("hobby2").innerText="";
         let zipcode = document.getElementById("zip").value;
         let url = "https://mparking.dk/CA2Backend/api/person/allWithZip/" + zipcode;
         fetch(url)
