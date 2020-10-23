@@ -19,7 +19,7 @@
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal3">Get People by Zip</button>
     <button class="btn btn-secondary">Get all zips</button>
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal5">Get Number of people by Hobby</button>
-    <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal6">Add Person</button>
+    <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal6">Register</button>
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal7">Edit Person</button>
     
     </div>
@@ -98,7 +98,41 @@
       </div>
     </div>
   </div>
+
+  <!-- Add person -->
   
+  <div class="modal fade" id="exampleModal6" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+          <button id="closeZip" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="display" class="shadow-sm p-3 mb-5 bg-white rounded col">
+            <div id="display" class="shadow-sm p-3 mb-5 bg-white rounded col-6">
+            <p>First name</p><input type="text" id="firstName"> 
+            <br>
+            <p>Last name</p><input type="text" id="lastName">
+            <br>
+            <p>Email</p><input type="email" id="email">
+          </div>
+          <div id="display" class="shadow-sm p-3 mb-5 bg-white rounded col-6">
+            <h4>Address</h4>
+          </div>
+          </div>
+            
+        </div>
+        <div class="modal-footer">
+          
+          <button id="getByZip" type="button" class="btn btn-primary">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <script src="../src/index.js"></script>
 </body>

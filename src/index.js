@@ -37,7 +37,7 @@ function getAllByHobby() {
 }
  const btnZip = document.getElementById("getByZip").addEventListener("click", getByZip);
 
-function getByZip(e){
+function getByZip(){
     let zipcode = document.getElementById("zip").value;
     let url = "https://mparking.dk/CA2Backend/api/person/allWithZip/" + zipcode;
     fetch(url)
