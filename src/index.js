@@ -146,7 +146,7 @@ function hobbyList(e) {
 }
 
 const btnAdd = document.getElementById("addPerson").addEventListener("click", addPerson);
-const btnHobby = document.getElementById("hobbiesP").addEventListener("click", chosen);
+// const btnHobby = document.getElementById("hobbiesP").addEventListener("click", chosen);
 
 function chosen(e) {
     let target = e.target;
@@ -163,9 +163,9 @@ function addPerson() {
     let zip = document.getElementById("zipRegister").value;
     let phoneNr = document.getElementById("phoneNr").value;
     let phoneDisc = document.getElementById("phoneDisc").value;
-    let hobbyName = document.getElementById("chosen").value;
+    let hobbyName = document.getElementById("hobb").value;
 
-    let url = "https://mparking.dk/CA2Backend/api/person";
+    let url = "https://mparking.dk/CA2Backend/api/person/";
 
     const options = {
         method: "POST",
@@ -186,6 +186,7 @@ function addPerson() {
         })
     }
 
+    console.log(options);
     fetch(url, options)
         .then(res => fetchWithErrorCheck(res))
 
