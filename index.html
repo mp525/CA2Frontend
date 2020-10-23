@@ -19,7 +19,7 @@
     <button class="btn btn-secondary" id="getAllZips">Get all zips</button>
     <button class="btn btn-secondary" data-toggle="modal" data-target="#countHobby">Get Number of People by Hobby</button>
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal3">Get People by Zip</button>
-    <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal6">Register</button>
+    <button class="btn btn-secondary btn-info" data-toggle="modal" data-target="#exampleModal6">Register</button>
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal7">Edit Person</button>
     
     </div>
@@ -124,33 +124,52 @@
 
   <!-- Add person -->
   
-  <div class="modal fade" id="exampleModal6" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade bg-info" id="exampleModal6" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Register form</h5>
           <button id="closeZip" type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <div id="display" class="shadow-sm p-3 mb-5 bg-white rounded col">
-            <div id="display" class="shadow-sm p-3 mb-5 bg-white rounded col-6">
+          
+            <div id="display" class="shadow-sm p-3 mb-5 bg-white rounded col">
+            <h4>Credentials</h4>
             <p>First name</p><input type="text" id="firstName"> 
             <br>
             <p>Last name</p><input type="text" id="lastName">
             <br>
             <p>Email</p><input type="email" id="email">
+            <br>
+            <p>Phone number</p><input type="number" id="phoneNr">
+            <br>
+            <p>Phone description (fx home, work etc.)</p><input type="text" id="phoneDisc">
           </div>
-          <div id="display" class="shadow-sm p-3 mb-5 bg-white rounded col-6">
+          <div id="display" class="shadow-sm p-3 mb-5 bg-white rounded col">
             <h4>Address</h4>
+            <p>Street name</p><input type="text" id="street"> 
+            <p>House number</p><input type="text" id="houseNr"> 
+            <p>Zipcode</p><input type="text" id="zipRegister"> 
           </div>
+          <div id="display" class="shadow-sm p-3 mb-5 bg-white rounded col">
+            <h4>Choose a hobby</h4>
+            <h6>Hobbies:</h6>
+            <p id="hobbiesP">
+              <br>
+              <button id="Animation">Animation</button>
+              <button id="Airsoft">Airsoft</button>
+              <button id="Hækling">Hækling</button>
+              <input id = "hobb" type="text">
+            </p>
           </div>
+          <div id="succesAdd"></div>
             
         </div>
         <div class="modal-footer">
           
-          <button id="getByZip" type="button" class="btn btn-primary">Register</button>
+          <button id="addPerson" type="button" class="btn btn-primary">Register</button>
         </div>
       </div>
     </div>
@@ -178,7 +197,7 @@
   </div>
 </div>
 
-  <script src="/src/index.js"></script>
+  <script src="../src/index.js"></script>
 </body>
     
   
