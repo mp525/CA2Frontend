@@ -111,8 +111,8 @@ function getAllZips() {
 
     function getByZip(e) {
         document.getElementById("table").innerHTML="";
-    document.getElementById("table2").innerHTML="";
-    document.getElementById("hobby2").innerText="";
+        document.getElementById("table2").innerHTML="";
+        document.getElementById("hobby2").innerText="";
         let zipcode = document.getElementById("zip").value;
         let url = "https://mparking.dk/CA2Backend/api/person/allWithZip/" + zipcode;
         fetch(url)
@@ -134,5 +134,30 @@ function getAllZips() {
         document.getElementById("closeZip").click();
 
     }
+    document.getElementById("edit").onclick=editThePerson;
+    function editThePerson(){
+        let id=document.getElementById("id1").value;
+        let name=document.getElementById("name1").value;
+        let name2=document.getElementById("name2").value;
+        let options = {
+            
+            method: "PUT",
+            headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                
+              firstName: name,
+              lastName: name2
+              
+            })
+         }
+         let url="https://mparking.dk/CA2Backend/api/person/update/"+id;
+         console.log(id,name1,name2);
+         fetch(url,options);
+         document.getElementById("hobby2").innerHTML="Done";
+    }
+
 
   
