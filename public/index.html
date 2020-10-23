@@ -16,8 +16,9 @@
     <div align="center" class="shadow p-3 mb-5 bg-white rounded">
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Get Person By Phone</button>
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal2">Get People by Hobby</button>
+    <button class="btn btn-secondary" id="getAllZips">Get all zips</button>
+    <button class="btn btn-secondary" data-toggle="modal" data-target="#countHobby">Get Number of people by Hobby</button>
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal3">Get People by Zip</button>
-    <button class="btn btn-secondary">Get all zips</button>
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal5">Get Number of people by Hobby</button>
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal6">Register</button>
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal7">Edit Person</button>
@@ -30,6 +31,7 @@
         <h3 align="center">Information will be shown here</h3>
         <table id="table" class="table"></table>
         <table id="table2" class="table"></table>
+        <p id="getCount"></p>
         <br><br><br><br>
 
     </div>
@@ -57,6 +59,9 @@
     </div>
   </div>
 
+
+
+
 <!-- Get People by hobby -->
 <div class="modal fade" id="exampleModal2" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -73,6 +78,25 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Get Number of People by Hobby -->
+  <div class="modal fade" id="countHobby" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="GetCountLabel">Get Number of People by hobby</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </div>
+        <div class="modal-body">
+          <input type="text" id="count">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="submitCount" type="button" class="btn btn-primary">Get number</button>
         </div>
       </div>
     </div>
