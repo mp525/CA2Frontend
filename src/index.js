@@ -64,11 +64,21 @@ function getCountHobby() {
 
     fetch(url)
     .then(function (response) {
+        if (!response.ok) {
+            return Promise.reject({ status: response.status, fullError: response.json() })
+        }
         return response.json();
     })
     .then(function (data) {
         document.getElementById("table2").innerHTML="<p align=\"center\">Number of people with the hobby "+hobbyName+": "+data.count+"</p>";
-        console.log(data.count);
+        //console.log(data.count);
+    }).catch(err => {
+        if (err.status) {
+            err.fullError.then(e => console.log(e.detail));
+            document.getElementById("table2").innerHTML="<p align=\"center\">The given hobby \""+hobbyName+"\" does not exist in the database</p>";
+        } else {
+            console.log("Network error");
+        }
     });
 }
 
