@@ -46,7 +46,7 @@ function getCountHobby() {
         return response.json();
     })
     .then(function (data) {
-        document.getElementById("table2").innerHTML="<p>Number of people with the hobby "+hobbyName+": "+data.count+"</p>";
+        document.getElementById("table2").innerHTML="<p align=\"center\">Number of people with the hobby "+hobbyName+": "+data.count+"</p>";
         console.log(data.count);
     });
 }
