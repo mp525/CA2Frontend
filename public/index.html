@@ -17,9 +17,8 @@
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Get Person By Phone</button>
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal2">Get People by Hobby</button>
     <button class="btn btn-secondary" id="getAllZips">Get all zips</button>
-    <button class="btn btn-secondary" data-toggle="modal" data-target="#countHobby">Get Number of people by Hobby</button>
+    <button class="btn btn-secondary" data-toggle="modal" data-target="#countHobby">Get Number of People by Hobby</button>
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal3">Get People by Zip</button>
-    <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal5">Get Number of people by Hobby</button>
     <button class="btn btn-secondary btn-info" data-toggle="modal" data-target="#exampleModal6">Register</button>
     <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal7">Edit Person</button>
     
@@ -30,8 +29,8 @@
     <div id="display" class="shadow-sm p-3 mb-5 bg-white rounded col-10">
         <h3 align="center">Information will be shown here</h3>
         <table id="table" class="table"></table>
+        <h3 align="center" id="hobby2"></h3>
         <table id="table2" class="table"></table>
-        <p id="getCount"></p>
         <br><br><br><br>
 
     </div>
@@ -67,17 +66,17 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Get People by hobby</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Get People by Hobby</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          ...2
-        </div>
+          <p>Type Hobby name</p><input type="text" id="hobby">
+                </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary" id="allByHobby">getAllHobby</button>
         </div>
       </div>
     </div>
@@ -177,7 +176,28 @@
       </div>
     </div>
   </div>
-
+<!-- Edit Person -->
+<div class="modal fade" id="exampleModal7" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Get Person By Phone</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <p>ID</p><input type="number" id="id1">
+          <p>First Name</p><input type="text" id="name1">
+          <p>Last Name</p><input type="text" id="name2">
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-primary" id="edit">Edit Person With That ID</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <script src="../src/index.js"></script>
 </body>
