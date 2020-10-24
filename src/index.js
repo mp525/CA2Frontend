@@ -141,18 +141,22 @@ function getByZip() {
 
 }
 
-function hobbyList(e) {
+const hobbiesFill = document.getElementById("registerStart").addEventListener("click", hobbyList);
 
+
+function hobbyList(e) {
+    let url = "https://mparking.dk/CA2Backend/api/person/allHobbies";
+    fetch(url)
+    .then((res)=>{return res.json()})
+    .then(function(data){
+        let hobbies = data.map((h)=>{
+            return "<option value="+ h.name +">"+ h.name +"</option>"
+        });
+        document.getElementById("allHobbies").innerHTML = hobbies.join("");
+    });
 }
 
 const btnAdd = document.getElementById("addPerson").addEventListener("click", addPerson);
-// const btnHobby = document.getElementById("hobbiesP").addEventListener("click", chosen);
-
-function chosen(e) {
-    let target = e.target;
-    chosen = target.id;
-    document.getElementById("chosen").innerHTML = target.id;
-}
 
 function addPerson() {
     let firstName = document.getElementById("firstName").value;
@@ -163,7 +167,7 @@ function addPerson() {
     let zip = document.getElementById("zipRegister").value;
     let phoneNr = document.getElementById("phoneNr").value;
     let phoneDisc = document.getElementById("phoneDisc").value;
-    let hobbyName = document.getElementById("hobb").value;
+    let hobbyName = document.getElementById("allHobbies").value;
 
     let url = "https://mparking.dk/CA2Backend/api/person/";
 
