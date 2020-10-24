@@ -110,13 +110,11 @@ function getAllZips() {
             let arr1=[20,40,60,80,100,120,140,160,180,200];
 console.log(data.length);
             for (i = 0; i < data.length; i++) {
-                if(arr1.includes(i)){
-                    str += data[i] + "<br>";
-                }else{
+                
 
                 
                 str += data[i] + " ";
-              }
+              
             }
             
             document.getElementById("table").innerHTML = str;
