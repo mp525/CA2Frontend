@@ -126,6 +126,9 @@ console.log(data.length);
 const btnZip = document.getElementById("getByZip").addEventListener("click", getByZip);
 
 function getByZip() {
+    document.getElementById("table").innerHTML="";
+    document.getElementById("table2").innerHTML="";
+    document.getElementById("hobby2").innerText="";
     let zipcode = document.getElementById("zip").value;
     let url = "https://mparking.dk/CA2Backend/api/person/allWithZip/" + zipcode;
     fetch(url)
@@ -226,6 +229,9 @@ function fetchWithErrorCheck(res) {
 
     document.getElementById("edit").onclick=editThePerson;
     function editThePerson(){
+        document.getElementById("table").innerHTML="";
+        document.getElementById("table2").innerHTML="";
+        document.getElementById("hobby2").innerText="";
         let id=document.getElementById("id1").value;
         let name=document.getElementById("name1").value;
         let name2=document.getElementById("name2").value;
